@@ -14,7 +14,7 @@
 <%= form_for([@post,@post.comments.build]) do |f| %>
 	<p>
 		<%= f.label :commenter %><br/>
-		<%= f.text_fiel :commenter %>
+		<%= f.text_field :commenter %>
 	</p>
 	<p>
 		<%= f.label :body %><br/>
@@ -26,7 +26,7 @@
 <% end %>
 
 <h2>Comentarios</h2>
-<% @post.commments.each do |comment| %>
+<% @post.comments.each do |comment| %>
 <p>
 	<strong>Commenter:</strong>
 	<%= comment.commenter %>
