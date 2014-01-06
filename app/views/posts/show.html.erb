@@ -11,33 +11,21 @@
 
 
 <h2>Agrega un comentario:</h2>
-<%= form_for([@post,@post.comments.build]) do |f| %>
+<%= form_for([@post,@comm]) do |f| %>
+	<%= f.hidden_field :id_post, :value=> @post.id %>
 	<p>
 		<%= f.label :commenter %><br/>
-		<%= f.text_field :commenter %>
+		<%= f.text_field :commenter, :class => 'form-control' %>
 	</p>
 	<p>
 		<%= f.label :body %><br/>
-		<%= f.text_area :body %>
+		<%= f.text_area :body, :class => 'form-control' %>
 	</p>
 	<p>
-		<%= f.submit %>
+		<%= f.submit :class => 'btn btn-default' %>
 	</p>
 <% end %>
 
-<!--
-<h2>Comentarios</h2>
-<% @post.comments.each do |comment| %>
-<p>
-	<strong>Commenter:</strong>
-	<%= comment.commenter %>
-</p>
-<p>
-	<strong>Comment:</strong>
-	<%= comment.body %>
-</p>
-<% end %>
--->
 
 <h2>Comentarios</h2>
 <%= render @post.comments %>

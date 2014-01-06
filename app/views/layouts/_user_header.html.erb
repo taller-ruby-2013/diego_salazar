@@ -1,8 +1,23 @@
-<ul class="nav nav-pills pull-right">
+<!--ul class="nav nav-pills pull-right">
   <% if user_signed_in? %>
     <li><%= link_to "Salir", destroy_user_session_path, :method => :delete %></li>
   <% else %>
     <li><%= link_to "Ingresar", new_user_session_path %></li>
     <li><%= link_to "Registrarse", new_user_registration_path %></li>
   <% end %>
-</ul>
+</ul-->
+<style type="text/css">
+  .headerbg{
+    position: absolute;
+    top: -30px;
+    right: 0;
+  }
+</style>
+<header style="background-color: #f5f5f5; padding: 30px 0; margin-bottom: 20px;">
+    <div class="container" style="position: relative;">
+        <h1 class="text-primary">DIEGO'S BLOG</h1>
+        <p class="label label-default">Blog informativo! JK, I have no idea what I'm doing!</p>
+        
+        <%= image_tag("default-ogb.png", :size => "350x149", :class => "headerbg")%>
+    </div>
+</header>

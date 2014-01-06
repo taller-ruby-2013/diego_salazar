@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record -> replaced
-gem 'pg'
+# gem 'pg'# -> Heroku
+gem 'sqlite3' # -> Local
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

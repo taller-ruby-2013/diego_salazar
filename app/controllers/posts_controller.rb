@@ -38,6 +38,7 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
+		@comm = Comment.new
 	end
 
 	def index
