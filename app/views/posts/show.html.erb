@@ -1,11 +1,5 @@
-<p>
-	<strong>Title:</strong>
-	<%= @post.title %>
-</p>
-<p>
-	<strong>Text:</strong>
-	<%= @post.text %>
-</p>
+<h3><%= @post.title %></h3>
+<p><%= @post.text %></p>
 
 <%= link_to 'Back', posts_path %> | <%= link_to 'Edit', edit_post_path(@post) %>
 

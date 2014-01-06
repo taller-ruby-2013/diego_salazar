@@ -21,38 +21,22 @@
                 </div>
         </div>
         <% end %>
-        <div class="text-center">
-                <ul class="pagination">
-                        <li class="disabled"><a href="#">&laquo;</a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li class="disabled"><a href="#">...</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                </ul>
-        </div>
-        <ul class="pager">
-                <li class="previous disabled"><a href="#">&larr; Anteriores</a></li>
-                <li class="next"><a href="#">Recientes &rarr;</a></li>
-        </ul>
+        <%= will_paginate @posts, renderer: BootstrapPagination::Rails  %>
     </div>
     <!-- navbar -->
     <div class="col-md-3">
         <div class="nav affix-top" role="complementary">
             <ul class="nav">
                 <li>
-                    <form action="/search" method="post" role="form">
+                    <form action="" method="post" role="form">
                     	<div class="input-group">
                             <input type="search" class="form-control" name="search" placeholder="Buscar...">
                             <span class="input-group-btn">
-                                    <button class="btn btn-default" type="submit">Buscar!</button>
+                                    <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
                             </span>
                     	</div>
                     </form>
                 </li>
-                <li><a href="#">Archive</a></li>
                 <li><%= link_to "New Post", new_post_path %></li>
                 <li><a href="https://github.com/taller-ruby-2013/diego_salazar" target="_blank">Revisa el c&oacute;digo!</a></li>
                 <li>
@@ -63,5 +47,4 @@
             </ul>
         </div>
     </div>
-</div>
 </div>

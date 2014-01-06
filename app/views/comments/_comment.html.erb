@@ -1,15 +1,20 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
- 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
+<div class="row">
+	<div class="col-md-1">
+		<%= link_to [comment.post, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } do %>
+		<span class="glyphicon glyphicon-remove"></span>
+		<% end %>
+	</div>
+	<div class="col-md-2">
+		<span class="glyphicon glyphicon-user"></span>
+		<strong><%= comment.commenter %></strong>
+	</div>
+	<div class="col-md-9">
+		<blockquote><%= comment.body %></blockquote>
+	</div>
+</div>
 
 <p>
-  <%= link_to 'Destroy Comment', [comment.post, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
+  
 </p>
